@@ -51,6 +51,7 @@
   function init() {
     setupTheme();
     setupEventListeners();
+    updateFilterCounts();
     applyFilters();
     updateHeaderStats();
 
@@ -60,6 +61,21 @@
       if (e.key === 'ArrowRight' || e.key === 'ArrowDown') nextQ();
       if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') prevQ();
       if (e.key === 'Enter') submitCurrentAnswer();
+    });
+  }
+
+  function updateFilterCounts() {
+    const counts = { all: state.allQuestions.length };
+    state.allQuestions.forEach(q => {
+      counts[q.subject] = (counts[q.subject] || 0) + 1;
+    });
+    
+    document.querySelectorAll('#subject-filter-list .filter-item').forEach(el => {
+      const subj = el.dataset.subject;
+      const countEl = el.querySelector('.filter-count');
+      if (countEl && counts[subj] !== undefined) {
+        countEl.textContent = counts[subj];
+      }
     });
   }
 
