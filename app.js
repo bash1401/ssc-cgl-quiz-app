@@ -228,6 +228,7 @@
       DOM.qOptionsList.querySelectorAll('.option-card').forEach(card => {
         card.addEventListener('click', () => {
           state.userAnswers[q.id] = card.dataset.key;
+          state.submittedStates[q.id] = true; // Instant submit on selection
           saveState();
           renderCurrentQuestion();
         });
