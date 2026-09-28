@@ -188,7 +188,7 @@
     const isSubmitted = !!state.submittedStates[q.id];
     const userAns = state.userAnswers[q.id];
 
-    DOM.qSubjectBadge.textContent = q.subject;
+    DOM.qSubjectBadge.textContent = q.exam_year ? `${q.exam_year} • ${q.subject}` : q.subject;
     DOM.qTopicBadge.textContent = q.topic;
     DOM.btnBookmark.textContent = state.bookmarks.has(q.id) ? '🔖' : '📑';
 
