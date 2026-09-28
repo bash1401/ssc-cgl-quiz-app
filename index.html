@@ -3,14 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SSC CGL Tier-1 & Tier-2 Exam Practice Suite with step-by-step math formulas, reasoning logic, and solutions.">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <meta name="description" content="SSC CGL Tier-1 & Tier-2 Exam Practice Suite with 2,979 authentic official previous year questions and step-by-step solutions.">
   <title>SSC CGL Exam Practice & Solution Suite</title>
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=2979_v3">
+  <script>
+    // Unconditionally bust stale synthetic cache and storage
+    try {
+      if (!localStorage.getItem('ssc_pyq_authentic_2979')) {
+        localStorage.removeItem('ssc_user_answers');
+        localStorage.removeItem('ssc_submitted_states');
+        localStorage.setItem('ssc_pyq_authentic_2979', 'true');
+      }
+    } catch(e) {}
+  </script>
 </head>
 <body>
 
@@ -20,15 +33,15 @@
       <a href="#" class="brand">
         <span class="ssc-logo-badge">SSC CGL PYQs</span>
         <div>
-          <div class="brand-title">SSC CGL Previous Year Questions (2018-2024)</div>
-          <div class="brand-subtitle">Tier-1 & Tier-2 Solved Papers</div>
+          <div class="brand-title">SSC CGL Official Previous Year Exam Bank</div>
+          <div class="brand-subtitle">2,979 Authentic Shift Questions • Tier-1 & Tier-2 Solved Papers</div>
         </div>
       </a>
 
       <div class="nav-stats">
         <div class="stat-item" title="Questions Answered">
           <span>Answered:</span>
-          <span class="stat-value" id="stat-answered">0 / 320</span>
+          <span class="stat-value" id="stat-answered">0 / 2979</span>
         </div>
         <div class="stat-item" title="Accuracy Percentage">
           <span>Accuracy:</span>
@@ -76,24 +89,24 @@
         <div class="sidebar-title">Subjects / Sections</div>
         <div class="filter-list" id="subject-filter-list">
           <div class="filter-item active" data-subject="all">
-            <span>All Authentic PYQs (Official Papers)</span>
-            <span class="filter-count" id="count-all">320</span>
+            <span>All Authentic PYQs</span>
+            <span class="filter-count" id="count-all">2979</span>
           </div>
           <div class="filter-item" data-subject="Quantitative Aptitude">
             <span>Quantitative Aptitude</span>
-            <span class="filter-count">8</span>
+            <span class="filter-count" id="count-quant">921</span>
           </div>
           <div class="filter-item" data-subject="General Intelligence & Reasoning">
             <span>Reasoning</span>
-            <span class="filter-count">6</span>
+            <span class="filter-count" id="count-reasoning">643</span>
           </div>
           <div class="filter-item" data-subject="General Awareness">
             <span>General Awareness (GK)</span>
-            <span class="filter-count">6</span>
+            <span class="filter-count" id="count-gk">852</span>
           </div>
           <div class="filter-item" data-subject="English Language">
             <span>English Language</span>
-            <span class="filter-count">5</span>
+            <span class="filter-count" id="count-english">563</span>
           </div>
         </div>
       </div>
@@ -101,7 +114,7 @@
       <div class="sidebar-card">
         <div class="sidebar-title">
           <span>Question Grid</span>
-          <span style="font-size:0.75rem; color:var(--text-dark-muted);" id="grid-label">25 Questions</span>
+          <span style="font-size:0.75rem; color:var(--text-dark-muted);" id="grid-label">2,979 Questions</span>
         </div>
         <div class="nav-grid" id="question-nav-grid"></div>
       </div>
@@ -115,8 +128,8 @@
         
         <div class="question-header">
           <div class="question-meta">
-            <span class="badge badge-subject" id="q-subject-badge">Quantitative Aptitude</span>
-            <span class="badge badge-topic" id="q-topic-badge">Time & Work</span>
+            <span class="badge badge-subject" id="q-subject-badge">General Intelligence & Reasoning</span>
+            <span class="badge badge-topic" id="q-topic-badge">Official Shift PYQ</span>
           </div>
           <div>
             <button class="btn btn-icon" id="btn-bookmark" title="Bookmark Question">🔖</button>
@@ -124,7 +137,7 @@
         </div>
 
         <div class="question-text" id="q-text">
-          Loading question...
+          Loading authentic question...
         </div>
 
         <div class="options-list" id="q-options-list"></div>
@@ -163,7 +176,8 @@
     </div>
   </div>
 
-  <script src="data/questions.js?v=320_real"></script>
-  <script src="app.js?v=320_real"></script>
+  <script src="data/ssc_cgl_master_pyq.js?v=2979_v3"></script>
+  <script src="data/questions.js?v=2979_v3"></script>
+  <script src="app.js?v=2979_v3"></script>
 </body>
 </html>

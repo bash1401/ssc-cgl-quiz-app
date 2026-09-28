@@ -48,9 +48,23 @@
     explanationText: document.getElementById('explanation-text')
   };
 
-  function init() {
+  async function init() {
     setupTheme();
     setupEventListeners();
+
+    // Safety integrity check: If cache holds stale synthetic questions or is empty, reload fresh dataset
+    if (!state.allQuestions || state.allQuestions.length === 0 || (state.allQuestions[0] && /WORD_\d+/i.test(state.allQuestions[0].question))) {
+      try {
+        console.info("Fetching fresh authentic question bank...");
+        const res = await fetch('data/questions.json?t=' + Date.now());
+        const data = await res.json();
+        state.allQuestions = data;
+        window.SSC_QUESTIONS = data;
+      } catch (err) {
+        console.error("Error fetching question bank:", err);
+      }
+    }
+
     updateFilterCounts();
     applyFilters();
     updateHeaderStats();
@@ -77,6 +91,10 @@
         countEl.textContent = counts[subj];
       }
     });
+
+    if (DOM.gridLabel) {
+      DOM.gridLabel.textContent = `${state.filteredQuestions.length || state.allQuestions.length} Questions`;
+    }
   }
 
   function setupTheme() {
