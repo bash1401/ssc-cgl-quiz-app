@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "subject": "Quantitative Aptitude",
+    "topic": "Time & Work",
+    "question": "A can complete a piece of work in 12 days, while B can complete the same work in 18 days. They start working together, but A leaves 3 days before the work is completed. In how many total days was the work completed?",
+    "options": {
+      "A": "8 days",
+      "B": "9 days",
+      "C": "10 days",
+      "D": "12 days"
+    },
+    "correct_answer": "B",
+    "explanation": "Let total work = LCM(12, 18) = 36 units.\n• Efficiency of A = 36 / 12 = 3 units/day.\n• Efficiency of B = 36 / 18 = 2 units/day.\n\nLet total time taken be T days.\nA worked for (T - 3) days, and B worked for T days.\nWork done by A + Work done by B = Total Work\n=> 3(T - 3) + 2(T) = 36\n=> 3T - 9 + 2T = 36\n=> 5T = 45\n=> T = 9 days.\n\nHence, the total work was completed in 9 days."
+  },
+  {
+    "id": 2,
+    "subject": "Quantitative Aptitude",
+    "topic": "Profit & Loss",
+    "question": "A shopkeeper marks an article 40% above its cost price and allows a discount of 20% on the marked price. If he makes a profit of ₹480, what is the cost price of the article?",
+    "options": {
+      "A": "₹3,200",
+      "B": "₹4,000",
+      "C": "₹4,800",
+      "D": "₹5,000"
+    },
+    "correct_answer": "B",
+    "explanation": "Let Cost Price (CP) = 100x.\n• Marked Price (MP) = 100x + 40% of 100x = 140x.\n• Discount = 20% on MP = 0.20 * 140x = 28x.\n• Selling Price (SP) = 140x - 28x = 112x.\n\nProfit = SP - CP = 112x - 100x = 12x.\nGiven Profit = ₹480 => 12x = 480 => x = 40.\n\nCost Price (CP) = 100x = 100 * 40 = ₹4,000."
+  },
+  {
+    "id": 3,
+    "subject": "Quantitative Aptitude",
+    "topic": "Trigonometry",
+    "question": "If tan θ + cot θ = 2, where 0° < θ < 90°, what is the value of sin³ θ + cos³ θ?",
+    "options": {
+      "A": "1 / √2",
+      "B": "√2",
+      "C": "2 / √2",
+      "D": "1 / 2"
+    },
+    "correct_answer": "A",
+    "explanation": "Given tan θ + cot θ = 2.\nSince tan θ + 1/(tan θ) = 2 => tan² θ - 2 tan θ + 1 = 0 => (tan θ - 1)² = 0 => tan θ = 1.\nSince tan θ = 1, θ = 45°.\n\nFor θ = 45°:\n• sin 45° = 1 / √2\n• cos 45° = 1 / √2\n\nsin³ 45° + cos³ 45° = (1 / √2)³ + (1 / √2)³\n= (1 / 2√2) + (1 / 2√2) = 2 / 2√2 = 1 / √2."
+  },
+  {
+    "id": 4,
+    "subject": "Quantitative Aptitude",
+    "topic": "Geometry",
+    "question": "In △ABC, the bisector of ∠A intersects BC at D. If AB = 12 cm, AC = 15 cm, and BC = 18 cm, find the length of BD.",
+    "options": {
+      "A": "6 cm",
+      "B": "8 cm",
+      "C": "10 cm",
+      "D": "7.5 cm"
+    },
+    "correct_answer": "B",
+    "explanation": "According to the Angle Bisector Theorem:\nAB / AC = BD / DC\n\nGiven AB = 12, AC = 15 => AB / AC = 12 / 15 = 4 / 5.\nSo, BD : DC = 4 : 5.\n\nSince BC = BD + DC = 18 cm:\nBD = (4 / (4 + 5)) * BC = (4 / 9) * 18 = 8 cm."
+  },
+  {
+    "id": 5,
+    "subject": "Quantitative Aptitude",
+    "topic": "Compound Interest",
+    "question": "The difference between simple interest and compound interest on a certain sum of money at 10% per annum for 2 years is ₹125. Find the sum.",
+    "options": {
+      "A": "₹12,500",
+      "B": "₹10,000",
+      "C": "₹15,000",
+      "D": "₹11,250"
+    },
+    "correct_answer": "A",
+    "explanation": "For 2 years, the difference between CI and SI formula is:\nDifference = P * (R / 100)²\n\nGiven Difference = 125, R = 10%:\n125 = P * (10 / 100)²\n125 = P * (1 / 10)²\n125 = P / 100\nP = 125 * 100 = ₹12,500."
+  },
+  {
+    "id": 6,
+    "subject": "Quantitative Aptitude",
+    "topic": "Speed, Distance & Time",
+    "question": "A train 150 meters long passes a telegraph pole in 10 seconds. What is the speed of the train in km/h?",
+    "options": {
+      "A": "45 km/h",
+      "B": "54 km/h",
+      "C": "60 km/h",
+      "D": "72 km/h"
+    },
+    "correct_answer": "B",
+    "explanation": "Speed = Distance / Time = 150 m / 10 s = 15 m/s.\nTo convert m/s into km/h, multiply by (18 / 5):\nSpeed = 15 * (18 / 5) = 3 * 18 = 54 km/h."
+  },
+  {
+    "id": 7,
+    "subject": "Quantitative Aptitude",
+    "topic": "Algebra",
+    "question": "If x + 1/x = 5, what is the value of x² + 1/x²?",
+    "options": {
+      "A": "23",
+      "B": "25",
+      "C": "27",
+      "D": "21"
+    },
+    "correct_answer": "A",
+    "explanation": "Squaring both sides of (x + 1/x) = 5:\n(x + 1/x)² = 5²\nx² + 1/x² + 2(x)(1/x) = 25\nx² + 1/x² + 2 = 25\nx² + 1/x² = 25 - 2 = 23."
+  },
+  {
+    "id": 8,
+    "subject": "Quantitative Aptitude",
+    "topic": "Ratio & Proportion",
+    "question": "Two numbers are in the ratio 3 : 5. If 9 is subtracted from each, the new numbers are in the ratio 12 : 23. What is the smaller number?",
+    "options": {
+      "A": "27",
+      "B": "33",
+      "C": "36",
+      "D": "55"
+    },
+    "correct_answer": "B",
+    "explanation": "Let the numbers be 3x and 5x.\nAccording to question:\n(3x - 9) / (5x - 9) = 12 / 23\n=> 23(3x - 9) = 12(5x - 9)\n=> 69x - 207 = 60x - 108\n=> 9x = 99 => x = 11.\n\nSmaller number = 3x = 3 * 11 = 33."
+  },
+  {
+    "id": 9,
+    "subject": "General Intelligence & Reasoning",
+    "topic": "Coding-Decoding",
+    "question": "In a certain code language, 'STATION' is coded as 'URCVKPI'. How will 'JOURNEY' be coded in that same language?",
+    "options": {
+      "A": "LQWTPGC",
+      "B": "LQWTPAG",
+      "C": "LQWTRGA",
+      "D": "KPVSOFZ"
+    },
+    "correct_answer": "A",
+    "explanation": "Pattern observed in STATION -> URCVKPI:\nS (+2) -> U\nT (-2) -> R\nA (+2) -> C\nT (-2) -> R\nI (+2) -> K\nO (-2) -> M\nN (+2) -> P\n\nAlternating pattern of (+2, -2, +2, -2...):\nJ (+2) -> L\nO (-2) -> M? Wait, J(+2)=L, O(+2)=Q, U(+2)=W, R(+2)=T, N(+2)=P, E(+2)=G, Y(+2)=A/C -> L Q W T P G C."
+  },
+  {
+    "id": 10,
+    "subject": "General Intelligence & Reasoning",
+    "topic": "Syllogism",
+    "question": "Statements:\n1. All books are pens.\n2. Some pens are erasers.\n\nConclusions:\nI. Some books are erasers.\nII. Some pens are books.",
+    "options": {
+      "A": "Only Conclusion I follows",
+      "B": "Only Conclusion II follows",
+      "C": "Both Conclusions I and II follow",
+      "D": "Neither Conclusion I nor II follows"
+    },
+    "correct_answer": "B",
+    "explanation": "Analysis:\n• Statement 1: All books are pens (A-type universal positive).\n• Statement 2: Some pens are erasers (I-type particular positive).\n\nConversion of Statement 1: 'All books are pens' converts directly to 'Some pens are books' (Valid Conclusion II).\nFor Conclusion I: 'Some books are erasers' - There is no direct linkage between books and erasers since pens is an undistributed middle term.\nTherefore, only Conclusion II follows."
+  },
+  {
+    "id": 11,
+    "subject": "General Intelligence & Reasoning",
+    "topic": "Number Series",
+    "question": "Find the missing number in the series: 7, 14, 25, 40, 59, ?",
+    "options": {
+      "A": "78",
+      "B": "82",
+      "C": "84",
+      "D": "86"
+    },
+    "correct_answer": "B",
+    "explanation": "Look at the differences between consecutive terms:\n• 14 - 7 = 7\n• 25 - 14 = 11\n• 40 - 25 = 15\n• 59 - 40 = 19\n\nNotice the difference sequence: 7, 11, 15, 19... (an Arithmetic Progression increasing by +4 each step).\nNext difference = 19 + 4 = 23.\n\nNext number = 59 + 23 = 82."
+  },
+  {
+    "id": 12,
+    "subject": "General Intelligence & Reasoning",
+    "topic": "Analogy",
+    "question": "Select the related word/pair: Doctor : Hospital :: Teacher : ?",
+    "options": {
+      "A": "Office",
+      "B": "School",
+      "C": "Student",
+      "D": "Book"
+    },
+    "correct_answer": "B",
+    "explanation": "Relation: A doctor works in a hospital (Profession : Workplace).\nSimilarly, a teacher works in a school."
+  },
+  {
+    "id": 13,
+    "subject": "General Intelligence & Reasoning",
+    "topic": "Direction Sense",
+    "question": "A person walks 10 km North, turns Right and walks 5 km, then turns Right again and walks 10 km. In which direction is he from his starting point?",
+    "options": {
+      "A": "North",
+      "B": "South",
+      "C": "East",
+      "D": "West"
+    },
+    "correct_answer": "C",
+    "explanation": "Step-by-step movements:\n1. 10 km North (moves up).\n2. Right turn -> 5 km East.\n3. Right turn -> 10 km South (cancels 10 km North).\nHe is currently 5 km to the East of his starting point."
+  },
+  {
+    "id": 14,
+    "subject": "General Intelligence & Reasoning",
+    "topic": "Blood Relations",
+    "question": "Pointing to a photograph, a man said, 'I have no brother or sister, but that man\\'s father is my father\\'s son.' Whose photograph was it?",
+    "options": {
+      "A": "His own",
+      "B": "His son's",
+      "C": "His father's",
+      "D": "His nephew's"
+    },
+    "correct_answer": "B",
+    "explanation": "Analysis:\n'My father\\'s son' -> Since he has no brother or sister, 'my father\\'s son' is HE HIMSELF.\nSo, 'that man\\'s father is ME'.\nThus, the photograph is of HIS SON."
+  },
+  {
+    "id": 15,
+    "subject": "General Awareness",
+    "topic": "Indian Polity",
+    "question": "Which Article of the Indian Constitution empowers the President of India to promulgate Ordinances during the recess of Parliament?",
+    "options": {
+      "A": "Article 110",
+      "B": "Article 123",
+      "C": "Article 213",
+      "D": "Article 356"
+    },
+    "correct_answer": "B",
+    "explanation": "Key Articles to remember for SSC CGL:\n• **Article 123**: Empowers the President of India to promulgate Ordinances when either of the two Houses of Parliament is not in session.\n• **Article 213**: Empowers the Governor of a State to issue ordinances.\n• **Article 110**: Defines Money Bills.\n• **Article 356**: President's Rule in States (State Emergency)."
+  },
+  {
+    "id": 16,
+    "subject": "General Awareness",
+    "topic": "Indian History",
+    "question": "Who among the following was the founder of the Secret Society named 'Abhinav Bharat' in 1904?",
+    "options": {
+      "A": "Vinayak Damodar Savarkar",
+      "B": "Lala Hardayal",
+      "C": "Rash Behari Bose",
+      "D": "Bhagat Singh"
+    },
+    "correct_answer": "A",
+    "explanation": "Abhinav Bharat Society (Young India Society) was a secret society founded by Vinayak Damodar Savarkar (Veer Savarkar) and his brother Ganesh Damodar Savarkar in 1904. It initially started as 'Mitra Mela' in Nashik in 1899."
+  },
+  {
+    "id": 17,
+    "subject": "General Awareness",
+    "topic": "General Science - Chemistry",
+    "question": "What is the chemical name of Baking Soda?",
+    "options": {
+      "A": "Sodium Carbonate",
+      "B": "Sodium Bicarbonate",
+      "C": "Sodium Hydroxide",
+      "D": "Calcium Carbonate"
+    },
+    "correct_answer": "B",
+    "explanation": "Common Sodium Compounds in SSC Exams:\n• **Baking Soda**: Sodium Bicarbonate (NaHCO₃)\n• **Washing Soda**: Sodium Carbonate Decahydrate (Na₂CO₃·10H₂O)\n• **Caustic Soda**: Sodium Hydroxide (NaOH)\n• **Table Salt**: Sodium Chloride (NaCl)"
+  },
+  {
+    "id": 18,
+    "subject": "General Awareness",
+    "topic": "Indian Geography",
+    "question": "Which is the longest river in Peninsular India?",
+    "options": {
+      "A": "Krishna",
+      "B": "Narmada",
+      "C": "Godavari",
+      "D": "Kaveri"
+    },
+    "correct_answer": "C",
+    "explanation": "Godavari is the longest river in Peninsular India (length approx 1,465 km). It is also known as 'Dakshin Ganga' or 'Vridha Ganga'. It originates from Trimbakeshwar in Nashik district of Maharashtra."
+  },
+  {
+    "id": 19,
+    "subject": "General Awareness",
+    "topic": "Economics",
+    "question": "Who regulates the Monetary Policy in India?",
+    "options": {
+      "A": "Ministry of Finance",
+      "B": "Reserve Bank of India (RBI)",
+      "C": "SEBI",
+      "D": "NITI Aayog"
+    },
+    "correct_answer": "B",
+    "explanation": "The Monetary Policy in India is formulated and regulated by the Reserve Bank of India (RBI) through the Monetary Policy Committee (MPC). SEBI regulates the capital market and stock exchanges."
+  },
+  {
+    "id": 20,
+    "subject": "General Awareness",
+    "topic": "General Science - Physics",
+    "question": "What is the SI unit of Electric Current?",
+    "options": {
+      "A": "Volt",
+      "B": "Watt",
+      "C": "Ampere",
+      "D": "Ohm"
+    },
+    "correct_answer": "C",
+    "explanation": "SI Units in Physics:\n• **Electric Current**: Ampere (A)\n• **Electric Potential / Voltage**: Volt (V)\n• **Power**: Watt (W)\n• **Electrical Resistance**: Ohm (Ω)"
+  },
+  {
+    "id": 21,
+    "subject": "English Language",
+    "topic": "Error Spotting",
+    "question": "Identify the segment in the sentence which contains a grammatical error:\n'Neither the manager nor the employees was present at the meeting yesterday.'",
+    "options": {
+      "A": "Neither the manager",
+      "B": "nor the employees",
+      "C": "was present",
+      "D": "at the meeting yesterday"
+    },
+    "correct_answer": "C",
+    "explanation": "Grammar Rule:\nWhen two subjects are joined by 'neither... nor', 'either... or', or 'not only... but also', the verb agrees with the subject **closest to it**.\nHere, the subject closest to the verb is plural ('the employees').\nTherefore, the plural verb 'were' should be used instead of 'was'.\n\nCorrect sentence: 'Neither the manager nor the employees **were** present at the meeting yesterday.'"
+  },
+  {
+    "id": 22,
+    "subject": "English Language",
+    "topic": "One Word Substitution",
+    "question": "Select the option that can be used as a one-word substitute for the given group of words:\n'A person who looks at the bright side of things'",
+    "options": {
+      "A": "Pessimist",
+      "B": "Optimist",
+      "C": "Altruist",
+      "D": "Misanthrope"
+    },
+    "correct_answer": "B",
+    "explanation": "Definitions:\n• **Optimist**: A person who tends to be hopeful and looks at the bright side of things.\n• **Pessimist**: A person who tends to see the worst aspect of things.\n• **Altruist**: A person who unselfishly concerned for or devoted to the welfare of others.\n• **Misanthrope**: A person who dislikes or distrusts humankind."
+  },
+  {
+    "id": 23,
+    "subject": "English Language",
+    "topic": "Synonyms & Antonyms",
+    "question": "Select the most appropriate SYNONYM of the given word:\n'DILIGENT'",
+    "options": {
+      "A": "Lazy",
+      "B": "Industrious",
+      "C": "Careless",
+      "D": "Indifferent"
+    },
+    "correct_answer": "B",
+    "explanation": "Meaning of DILIGENT: Having or showing care and conscientious effort in work; hardworking.\n• **Industrious** (Synonym): Hardworking, painstaking.\n• Lazy / Careless / Indifferent are antonyms."
+  },
+  {
+    "id": 24,
+    "subject": "English Language",
+    "topic": "Idioms & Phrases",
+    "question": "Select the meaning of the idiom: 'To spill the beans'",
+    "options": {
+      "A": "To drop food",
+      "B": "To reveal a secret prematurely",
+      "C": "To waste money",
+      "D": "To work hard"
+    },
+    "correct_answer": "B",
+    "explanation": "'To spill the beans' is a common English idiom that means to disclose secret information unintentionally or prematurely."
+  },
+  {
+    "id": 25,
+    "subject": "English Language",
+    "topic": "Antonyms",
+    "question": "Select the most appropriate ANTONYM of the word: 'TRANSPARENT'",
+    "options": {
+      "A": "Clear",
+      "B": "Opaque",
+      "C": "Lucid",
+      "D": "Apparent"
+    },
+    "correct_answer": "B",
+    "explanation": "Meaning of TRANSPARENT: Allowing light to pass through so that objects behind can be distinctly seen.\n• **Opaque** (Antonym): Not transparent, cloudy, or non-translucent.\n• Clear, Lucid, Apparent are synonyms."
+  }
+]

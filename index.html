@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SSC CGL Tier-1 & Tier-2 Exam Practice Suite with step-by-step math formulas, reasoning logic, and solutions.">
+  <title>SSC CGL Exam Practice & Solution Suite</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- App Header -->
+  <header class="app-header">
+    <div class="header-container">
+      <a href="#" class="brand">
+        <span class="ssc-logo-badge">SSC CGL 2026</span>
+        <div>
+          <div class="brand-title">Combined Graduate Level Exam</div>
+          <div class="brand-subtitle">Practice & Step-by-Step Solutions</div>
+        </div>
+      </a>
+
+      <div class="nav-stats">
+        <div class="stat-item" title="Questions Answered">
+          <span>Answered:</span>
+          <span class="stat-value" id="stat-answered">0 / 25</span>
+        </div>
+        <div class="stat-item" title="Accuracy Percentage">
+          <span>Accuracy:</span>
+          <span class="stat-value score" id="stat-accuracy">0%</span>
+        </div>
+        <div class="stat-item" title="Bookmarked Questions">
+          <span>Bookmarks:</span>
+          <span class="stat-value" id="stat-bookmarks">0</span>
+        </div>
+      </div>
+
+      <div class="header-controls">
+        <button class="btn btn-secondary" id="btn-open-search" title="Search Questions (Ctrl+K)">
+          🔍 Search
+        </button>
+        <button class="btn btn-icon" id="btn-toggle-theme" title="Toggle Theme">
+          🌙
+        </button>
+        <button class="btn btn-icon" id="btn-reset-stats" title="Reset Progress">
+          🔄
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Workspace -->
+  <div class="app-workspace">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      
+      <div class="sidebar-card">
+        <div class="sidebar-title">Mode</div>
+        <div class="mode-toggle-group">
+          <button class="mode-btn active" id="mode-study-btn">
+            📖 <span>Study & Practice (Step Solutions)</span>
+          </button>
+          <button class="mode-btn" id="mode-exam-btn">
+            ⏱️ <span>Tier-1 Mock Test (Timed)</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-title">Subjects / Sections</div>
+        <div class="filter-list" id="subject-filter-list">
+          <div class="filter-item active" data-subject="all">
+            <span>All Sections</span>
+            <span class="filter-count" id="count-all">25</span>
+          </div>
+          <div class="filter-item" data-subject="Quantitative Aptitude">
+            <span>Quantitative Aptitude</span>
+            <span class="filter-count">8</span>
+          </div>
+          <div class="filter-item" data-subject="General Intelligence & Reasoning">
+            <span>Reasoning</span>
+            <span class="filter-count">6</span>
+          </div>
+          <div class="filter-item" data-subject="General Awareness">
+            <span>General Awareness (GK)</span>
+            <span class="filter-count">6</span>
+          </div>
+          <div class="filter-item" data-subject="English Language">
+            <span>English Language</span>
+            <span class="filter-count">5</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-title">
+          <span>Question Grid</span>
+          <span style="font-size:0.75rem; color:var(--text-dark-muted);" id="grid-label">25 Questions</span>
+        </div>
+        <div class="nav-grid" id="question-nav-grid"></div>
+      </div>
+
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="main-content">
+      
+      <article class="question-card">
+        
+        <div class="question-header">
+          <div class="question-meta">
+            <span class="badge badge-subject" id="q-subject-badge">Quantitative Aptitude</span>
+            <span class="badge badge-topic" id="q-topic-badge">Time & Work</span>
+          </div>
+          <div>
+            <button class="btn btn-icon" id="btn-bookmark" title="Bookmark Question">🔖</button>
+          </div>
+        </div>
+
+        <div class="question-text" id="q-text">
+          Loading question...
+        </div>
+
+        <div class="options-list" id="q-options-list"></div>
+
+        <div class="card-footer">
+          <div style="display:flex; gap:0.75rem;">
+            <button class="btn btn-secondary" id="btn-prev">← Previous</button>
+            <button class="btn btn-secondary" id="btn-next">Next →</button>
+          </div>
+
+          <div style="display:flex; gap:0.75rem;">
+            <button class="btn btn-secondary" id="btn-toggle-explanation">💡 Show Step Solution</button>
+            <button class="btn btn-primary" id="btn-submit">Submit Answer</button>
+          </div>
+        </div>
+
+        <div class="explanation-box" id="explanation-box">
+          <div class="explanation-title">📌 Step-by-Step Solution & Concept Breakdown</div>
+          <div class="explanation-body" id="explanation-text"></div>
+        </div>
+
+      </article>
+
+    </main>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="modal-overlay" id="search-modal">
+    <div class="modal-content">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+        <h2 style="font-size:1.3rem;">Search SSC CGL Questions</h2>
+        <button class="btn btn-icon" id="btn-close-search">✕</button>
+      </div>
+      <input type="text" class="search-input" id="search-input" placeholder="Type topic (e.g., Trigonometry, Article 123, Syllogism, Profit & Loss)...">
+      <div class="search-results-list" id="search-results-list"></div>
+    </div>
+  </div>
+
+  <script src="data/questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
