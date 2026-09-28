@@ -1,5 +1,5 @@
 /**
- * SSC CGL Exam Practice Suite - JS Logic
+ * SSC CGL Exam Practice Suite - 10,000+ Question Engine
  */
 
 (function () {
@@ -53,6 +53,14 @@
     setupEventListeners();
     applyFilters();
     updateHeaderStats();
+
+    // Keybindings for navigation
+    document.addEventListener('keydown', (e) => {
+      if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') nextQ();
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') prevQ();
+      if (e.key === 'Enter') submitCurrentAnswer();
+    });
   }
 
   function setupTheme() {
@@ -75,7 +83,7 @@
   function setupEventListeners() {
     DOM.themeToggleBtn.addEventListener('click', toggleTheme);
     DOM.resetStatsBtn.addEventListener('click', () => {
-      if (confirm('Reset all user answers and progress stats?')) {
+      if (confirm('Reset all answers and stats?')) {
         state.userAnswers = {};
         state.submittedStates = {};
         saveState();
@@ -105,22 +113,26 @@
     });
 
     DOM.btnBookmark.addEventListener('click', toggleBookmark);
-    DOM.btnPrev.addEventListener('click', () => {
-      if (state.currentIndex > 0) {
-        state.currentIndex--;
-        renderCurrentQuestion();
-      }
-    });
-    DOM.btnNext.addEventListener('click', () => {
-      if (state.currentIndex < state.filteredQuestions.length - 1) {
-        state.currentIndex++;
-        renderCurrentQuestion();
-      }
-    });
+    DOM.btnPrev.addEventListener('click', prevQ);
+    DOM.btnNext.addEventListener('click', nextQ);
     DOM.btnSubmit.addEventListener('click', submitCurrentAnswer);
     DOM.btnToggleExplanation.addEventListener('click', () => {
       DOM.explanationBox.classList.toggle('visible');
     });
+  }
+
+  function prevQ() {
+    if (state.currentIndex > 0) {
+      state.currentIndex--;
+      renderCurrentQuestion();
+    }
+  }
+
+  function nextQ() {
+    if (state.currentIndex < state.filteredQuestions.length - 1) {
+      state.currentIndex++;
+      renderCurrentQuestion();
+    }
   }
 
   function applyFilters() {
@@ -136,8 +148,16 @@
 
   function renderQuestionGrid() {
     DOM.gridLabel.textContent = `${state.filteredQuestions.length} Questions`;
+    
+    // For 10,000 items, render window around current index to maintain fast performance
+    const total = state.filteredQuestions.length;
+    const windowSize = 50;
+    const startIdx = Math.max(0, state.currentIndex - 25);
+    const endIdx = Math.min(total, startIdx + windowSize);
+
     let html = '';
-    state.filteredQuestions.forEach((q, idx) => {
+    for (let idx = startIdx; idx < endIdx; idx++) {
+      const q = state.filteredQuestions[idx];
       const isCurrent = idx === state.currentIndex;
       const isSubmitted = state.submittedStates[q.id];
       const isBookmarked = state.bookmarks.has(q.id);
@@ -150,7 +170,7 @@
       if (isCurrent) statusClass += ' current';
 
       html += `<div class="nav-grid-item ${statusClass}" data-index="${idx}">${idx + 1}</div>`;
-    });
+    }
 
     DOM.questionNavGrid.innerHTML = html;
 
@@ -283,7 +303,7 @@
       q.question.toLowerCase().includes(qLower) || 
       q.topic.toLowerCase().includes(qLower) ||
       q.explanation.toLowerCase().includes(qLower)
-    );
+    ).slice(0, 30);
 
     if (matches.length === 0) {
       DOM.searchResultsList.innerHTML = '<div style="color:var(--text-dark-muted); padding:1rem; text-align:center;">No matching questions.</div>';
@@ -294,7 +314,7 @@
     matches.forEach(q => {
       html += `
         <div class="search-result-item" data-qid="${q.id}">
-          <div style="font-weight:700; color:var(--ssc-blue); font-size:0.85rem;">${q.subject} • ${q.topic}</div>
+          <div style="font-weight:700; color:var(--ssc-blue); font-size:0.85rem;">Q${q.id} • ${q.subject} • ${q.topic}</div>
           <div style="font-size:0.9rem;">${q.question}</div>
         </div>
       `;
